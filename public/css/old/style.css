@@ -1,0 +1,222 @@
+@font-face {
+    font-family: FedraSansPro-Demi;
+    src: url('../fonts/FedraSansPro-Demi.ttf');
+}
+@font-face {
+    font-family: SwiftC-Regular;
+    src: url('../fonts/SwiftC-Regular.ttf');
+}
+
+.Swift{
+    font-family: SwiftC-Regular !important;
+}
+
+.Fedra{
+    font-family: FedraSansPro-Demi !important;
+}
+*{
+    font-family: FedraSansPro-Demi !important;
+    color:#689d2f;
+}
+i.fa {
+    font-family: "FontAwesome"!important;
+    color: #fff;
+}
+body{
+    height: 100vh;
+    background-image: url("../images/football.png");
+    background-size:cover ;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment:fixed ;
+}
+h1{
+    width: 100%;
+    font-weight: bold;
+    font-size: 46px;
+}
+h1,h2{
+    position: relative;
+}
+h1:before, h2:before{
+    position: absolute;
+    display: inline-block;
+    content: '';
+    width: 45%;
+    top:100%;
+    border-bottom: 1px solid #e3e3e3;
+    left: 0;
+}
+
+h2:after,h1:after{
+    position: absolute;
+    display: inline-block;
+    content: '';
+    width: 45%;
+    top:100%;
+    border-bottom: 1px solid #e3e3e3;
+    right: 0;
+}
+.container{
+    margin-top: 100px;
+    background: #ffffff;
+    box-shadow: -1px 1px 16px 4px #000;
+}
+.f-container{
+    background: none;
+    box-shadow: none;
+}
+.butt{
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background:#689d2f ;
+    border-radius: 100%;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+.num{
+    position: absolute;
+    top:0;
+    left: 65%;
+    display: inline-block;
+}
+.butt:hover{
+    transform: scale(1.1, 1.1);
+}
+.text-muted small{
+    color:#6c757d!important
+}
+.card-body p{
+    font-size: 14px;
+}
+.get-basket{
+    display: none;
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    right: 5px;
+    background: #e3e3e3;
+    border-radius: 2px;
+    top:30px;
+    line-height: 25px;
+    box-shadow: -1px 1px 16px 4px #000;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.card:hover{
+    box-shadow: -1px 1px 16px 4px #000;
+    cursor: pointer;
+}
+.pagination .page-item a{
+    color:#689d2f
+}
+.pagination .page-item.active a{
+    background-color: #689d2f;
+    border-color: #689d2f;
+}
+
+
+#footer {
+    clear: both;
+    color: #AAA;
+    display: block;
+}
+
+#footer .widgettitle {
+    margin: 0px;
+    padding: 0px 0px 15px;
+    border-bottom: medium none;
+}
+#footer h4 {
+    color: #FFF;
+}
+
+#footer ul {
+    list-style: outside none none;
+}
+
+#footer li {
+    padding: 7px 0px;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+    margin: 0px;
+}
+
+#footer li a {
+    color: #DDD;
+}
+
+#sub-floor {
+    color: #AAA;
+    background: #031634 none repeat scroll 0% 0%;
+    padding: 10px 0px;
+}
+.butt.active{
+    background: red;
+}
+.myactive{
+    background: red;
+}
+.myabs1{
+    position: absolute;
+    right: 0;
+    top: 0px;
+    font-size: 20px;
+}
+.myabs2{
+    position: absolute;
+    right: 0;
+    top: 25px;
+    font-size: 20px;
+}
+ input{
+    position: relative;
+    height: 40px;
+    margin-top: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 18px;
+    width: 280px;
+    min-width: 50%;
+    border: none;
+    box-shadow: inset 0px 0px 4px 0px #689d2f;
+    border-radius: 10px;
+    outline: none;
+}
+
+ .c-img{
+     max-height: 170px;
+ }
+.attach{
+    height: 120px;
+    background-image: url('../images/fifa.jpg');
+    background-position:center center ;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media(max-width:767px){
+    .myabs1{
+        position: relative;
+        font-size: 20px;
+    }
+    .myabs2{
+        position: relative;
+        top: 0;
+        padding-right: 8px;
+        padding-bottom: 5px;
+        font-size: 20px;
+    }
+    .c-img{
+        max-height: inherit;
+    }
+ }
+ @media(max-width:581px){
+    .mysubmit{
+        font-size: 12px;
+    }
+}

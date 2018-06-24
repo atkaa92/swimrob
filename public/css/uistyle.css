@@ -1,0 +1,122 @@
+#fh5co-logo img{
+  width: 100px;
+  height: 41px;
+}
+#fh5co-services img{
+  width: 100%;
+}
+.price{
+ color: #444;
+}
+.shopping-cart{
+  margin-top: 10px!important;
+}
+.menu-2 .icon-shopping-cart{
+  font-size: 25px;
+}
+
+#fh5co-services, 
+#fh5co-started,
+#fh5co-testimonial, 
+#fh5co-product, 
+#fh5co-about, 
+#fh5co-contact {
+  padding: 3em 0;
+}
+
+#fh5co-started {
+  padding: 3em 0 1em;
+}
+
+.fh5co-heading {
+  margin-bottom: 2em;
+}
+
+.copyright{
+  color: #fff;
+  margin-top: 25px;
+}
+
+.icon{
+  cursor: pointer;
+}
+#fh5co-product .myactive{
+  background-color: #36ce36!important;
+}
+
+.fh5co-tabs .fh5co-tab-nav li {
+  width: 50%;
+}
+.db{
+  display: inline-block!important;
+}
+.bascketInputCount{
+  text-align: center;
+}
+.wrap-table-shopping-cart input{
+  width: 66px!important;
+  height: 40px!important;
+  margin: auto!important;
+  display: inline-block!important;
+}
+
+.wrap-table-shopping-cart .fa-plus{
+  font-size:28px;
+  color:#36ce36;
+  float: right;
+  margin-top: 6px;
+  cursor: pointer;
+}
+
+.wrap-table-shopping-cart .fa-minus{
+  font-size:28px;
+  color:#ff6161;
+  float: left;
+  margin-top: 6px;
+  cursor: pointer;
+}
+
+.shopping-cart{
+  position: fixed!important;
+  right: 10px!important;
+  top: 0!important;
+  z-index: 999999!important;
+  border: 3px solid #84afde;
+  padding: 21px 10px 17px 7px!important;
+  border-radius: 100%!important;
+  box-shadow: 0 0 30px #84afde !important;
+  color: #444;
+}
+.sitename{
+  font-size: 30px;
+  color: #444;
+  text-shadow: 0 0 5px #84afde !important;
+}
+.shopping-cart i {
+  font-size: 25px;
+}
+.wrap-table-shopping-cart .fa-remove{
+  font-size:28px;
+  color:#ff6161;
+  float: left;
+  opacity: 1;
+  margin-top: 6px;
+  cursor: pointer;
+}
+.fh5co-tab-nav{
+  margin-bottom: 0!important;
+}
+.how-itemcart1 img{
+  max-width: 100px;
+  width: 100%
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+.pagination > .active > span{
+  background-color: #84afde;
+  border-color: #84afde;
+}
