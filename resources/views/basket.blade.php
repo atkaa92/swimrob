@@ -10,15 +10,15 @@
             <div class="col-md-10 col-md-offset-1">
                 <div class="fh5co-tabs  animate-box">
                     <ul class="fh5co-tab-nav">
-                        <li class="active"><a href="#" data-tab="1"><span>Продукты</span></a></li>
-                        <li><a href="#" data-tab="2"><span>Завершит</span><span class="hidden-xs"> заказ</span></a></li>
+                        <li class="active bascketswitch" data-myswitch="switch1"><a href="#" data-tab="1"><span>Продукты</span></a></li>
+                        <li class="bascketswitch" data-myswitch="switch2"><a href="#" data-tab="2"><span>Завершит</span><span class="hidden-xs"> заказ</span></a></li>
                     </ul>
 
                     <!-- Tabs -->
                     <div class="fh5co-tab-content-wrap">
-                        <form class="form-inline" action="{{ url('/send-mail') }}" method="post">
+                        <form class="form-inline " action="{{ url('/send-mail') }}" method="post">
                             {{ csrf_field() }}
-                            <div class="fh5co-tab-content tab-content active" data-tab-content="1">
+                            <div class="fh5co-tab-content tab-content active switch2" data-tab-content="1">
                                 <div class="wrap-table-shopping-cart">
                                     <table class="table table-hover">
                                         <thead>
@@ -57,7 +57,7 @@
                                     </table>
                                 </div>
                             </div>
-                            <div class="fh5co-tab-content tab-content" data-tab-content="2">
+                            <div class="fh5co-tab-content tab-content switch1" data-tab-content="2">
                                 <div class="col-xs-12 text-center">
                                     <h3>Оставьте свои контактные данные и мы перезвоним Вам за 4 минуты</h3>
                                 </div>

@@ -6,6 +6,12 @@ $(document).ready(function () {
   //   $(this).find('.modal-body').load('/product/'+id)
   // });
 
+  
+  $('.bascketswitch').click(function () {
+      var myswitch = "."+$(this).data('myswitch')
+      $(myswitch).removeClass('active')
+  })
+
   $(document).on('click', '.oneClick', function () {
     var id = $(this).attr('data-id');
     var cookie = [];
