@@ -122,6 +122,10 @@ jQuery(document).ready(function($){
         var id = parent.attr('data-id');
         var cookie = JSON.parse($.cookie('products'));
         var index = cookie.indexOf(id);
+        var currenttotal = parent.find('.currenttotal').text();
+        var wholeTotal = $(".wholeTotal").text();
+        var wholeTotalResult = Number(wholeTotal) - Number(currenttotal);
+        $(".wholeTotal").text(" "+wholeTotalResult)
         if(index !== -1){
             cookie.splice(index,1)
         }
