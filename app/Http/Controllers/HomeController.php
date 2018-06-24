@@ -19,9 +19,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $products = Product::with(['images' => function($q){
-            $q->where('general',1)->first();
-        }])->paginate(6);
+        $products = Product::with('images')->paginate(6);
         return view('welcome')->with(compact('products'));
     }
 

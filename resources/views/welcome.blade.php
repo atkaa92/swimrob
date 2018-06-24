@@ -37,7 +37,7 @@
                     @if($key%3 === 0)
                         <div style="clear:both"></div>
                     @endif
-                    <div class="col-md-4 text-center animate-box">
+                    <div class="col-md-4 text-center animate-box" style="box-shadow:0 0 5px #84afde;margin-top:35px">
                         <div class="product">
                             <div class="product-grid" style="background-image:url({{ asset("/products/$product->id/".$product->generalImg()) }});">
                                 <div class="inner">
@@ -55,10 +55,7 @@
                                 <h3>{{ $product->name }}</h3>
                                 <span class="price">{{ $product->price }}P</span>
                             </div>
-                            <div class="desc">
-                                <p>{{ $product->desc }}</p>
-                            </div>
-                            <div class="oneclick">
+                            <div class="oneclick" style="overflow:hidden">
                                 <input data-id="{{ $product->id }}" type="button" name="oneclick" class="btn btn-info btn-block oneClick" value="Купить">
                             </div>
                         </div>
@@ -86,17 +83,11 @@
                                 <div class="modal-body col-xs-7">
                                     <div id="myCarousel{{ $product->id }}" class="carousel slide" data-ride="carousel">
                                         <div class="carousel-inner">
-                                            <div class="item active">
-                                            <img src="images/img_15.jpg" alt="Los Angeles" style="width:100%;">
-                                            </div>
-                                    
-                                            <div class="item">
-                                            <img src="images/img_16.jpg" alt="Chicago" style="width:100%;">
-                                            </div>
-                                        
-                                            <div class="item">
-                                            <img src="images/img_17.jpg" alt="New york" style="width:100%;">
-                                            </div>
+                                            @foreach($product->images as $k => $v)
+                                                <div class="item {{ !$k ? ' active' : '' }}">
+                                                    <img src="images/{{ $v->name }}" alt="Los Angeles" style="width:100%;">
+                                                </div>
+                                            @endforeach
                                         </div>
                                         <a class="left carousel-control" href="#myCarousel{{ $product->id }}" data-slide="prev">
                                             <span class="glyphicon glyphicon-chevron-left"></span>
