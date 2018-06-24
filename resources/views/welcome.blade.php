@@ -47,7 +47,7 @@
                                         @else
                                             <a data-id="{{ $product->id }}" class="icon basket">Добавить в корзину</a>
                                         @endif
-                                        {{-- <a data-toggle="modal" data-target="#productModal{{ $product->id }}" data-id="{{ $product->id }}" class="icon"><i class="icon-eye"></i></a> --}}
+                                        <a data-toggle="modal" data-target="#productModal{{ $product->id }}" data-id="{{ $product->id }}" class="icon"><i class="icon-eye"></i></a>
                                     </p>
                                 </div>
                             </div>
@@ -65,60 +65,52 @@
                     </div> 
                     <div class="modal fade" id="productModal{{ $product->id }}">
                         <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
+                            <div class="modal-content row">
                                 <div class="modal-header">
                                     <h2 class="modal-title text-center" style="width: 100%;">Описание продукта</h2>
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                                 </div>
-                                <div class="modal-body">
-                                    <div id="fh5co-product">
-                                        <div class="col-md-10 col-md-offset-1 animate-box">
-                                            <div class="owl-carousel owl-carousel-fullwidth product-carousel">
-                                                <div class="item">
-                                                    <div class="active text-center">
-                                                        <figure>
-                                                            <img src="{{ asset("images/img_15.jpg") }}" alt="user">
-                                                        </figure>
-                                                    </div>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="text-center">
-                                                        <figure>
-                                                            <img src="{{ asset("images/img_16.jpg") }}" alt="user">
-                                                        </figure>
-                                                    </div>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="text-center">
-                                                        <figure>
-                                                            <img src="{{ asset("images/img_17.jpg") }}" alt="user">
-                                                        </figure>
-                                                    </div>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="text-center">
-                                                        <figure>
-                                                            <img src="{{ asset("images/img_18.jpg") }}" alt="user">
-                                                        </figure>
-                                                    </div>
-                                                </div>
+                                <div class="modal-body col-xs-5">
+                                    <div class="desc text-center">
+                                        <h3>{{ $product->name }}</h3>
+                                        <span class="price">{{ $product->price }}P</span>
+                                    </div>
+                                    <div class="desc">
+                                        <p>{{ $product->desc }}</p>
+                                    </div>
+                                    @if(!in_array($product->id, $cookieids) )
+                                        <div class="desc text-center">
+                                            <a data-id="{{ $product->id }}" class="btn btn-info icon basket">Добавить в корзину</a>
+                                        </div>
+                                    @endif    
+                                </div>
+                                <div class="modal-body col-xs-7">
+                                    <div id="myCarousel{{ $product->id }}" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="item active">
+                                            <img src="images/img_15.jpg" alt="Los Angeles" style="width:100%;">
                                             </div>
-                                            <div class="row animate-box">
-                                                <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-                                                    <h2>Hauteville Rocking Chair</h2>
-                                                    <p>
-                                                        <a href="#" class="btn btn-primary btn-outline btn-lg">Add to Cart</a>
-                                                        <a href="#" class="btn btn-primary btn-outline btn-lg">Compare</a>
-                                                    </p>
-                                                </div>
+                                    
+                                            <div class="item">
+                                            <img src="images/img_16.jpg" alt="Chicago" style="width:100%;">
+                                            </div>
+                                        
+                                            <div class="item">
+                                            <img src="images/img_17.jpg" alt="New york" style="width:100%;">
                                             </div>
                                         </div>
+                                        <a class="left carousel-control" href="#myCarousel{{ $product->id }}" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="right carousel-control" href="#myCarousel{{ $product->id }}" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-info" data-dismiss="modal">Закрыть</button>
+                                <div class="modal-footer" style="clear:both">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
                                 </div>
-                    
                             </div>
                         </div>
                     </div> 

@@ -1,12 +1,4 @@
 $(document).ready(function () {
-  // $( "#productModal" ).on('show.bs.modal', function(event){
-  //   var target = event.relatedTarget;
-  //   var id = $(target).attr('data-id')
-  //   $(this).find('.modal-body').load('single.html')
-  //   $(this).find('.modal-body').load('/product/'+id)
-  // });
-
-  
   $('.bascketswitch').click(function () {
       var myswitch = "."+$(this).data('myswitch')
       $(myswitch).removeClass('active')
@@ -45,13 +37,9 @@ $(document).ready(function () {
         // else{
         //     cookie.splice(index,1)
         // }
-        
         $.cookie('products', JSON.stringify(cookie))
 
         $('.shopping-cart-small').text(cookie.length)
-        if ($(this).hasClass('btn')) {
-            window.location.replace('/basket');return;
-        }
         $(this).toggleClass('myactive')
     }
   })
