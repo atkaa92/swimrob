@@ -19,6 +19,10 @@ Route::get('/backet', 'HomeController@backet');
 Route::post('/send-mail', 'HomeController@sendMail');
 Route::post('/notify', 'HomeController@notify');
 
+Route::get('/thanks', function(){
+  return view('thanks'); 
+});
+
 Route::get('/admin', 'AdminController@index');
 Route::get('/add-product', 'AdminController@addProduct');
 Route::post('/add-product-func/{id?}', 'AdminController@addProductFunc');

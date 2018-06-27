@@ -64,13 +64,13 @@
                                 <div class="col-md-4 col-sm-4">
                                     <div class="form-group">
                                         <label for="name" class="sr-only">Ваше Имя</label>
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Ваше Имя" value="{{ $name }}">
+                                        <input type="text" class="form-control contactInput" id="name" name="name" placeholder="Ваше Имя" value="{{ $name }}">
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-4">
                                     <div class="form-group">
                                         <label for="tel" class="sr-only">Телефон</label>
-                                    <input type="text" class="form-control" id="tel" name="tel" placeholder="Телефон" value="{{ $email }}">
+                                    <input type="text" class="form-control contactInput" id="tel" name="tel" placeholder="Телефон" value="{{ $email }}">
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-4">

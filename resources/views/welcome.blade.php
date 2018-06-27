@@ -66,7 +66,7 @@
                                 <div class="modal-header">
                                     <h2 class="modal-title text-center" style="width: 100%;">Описание продукта</h2>
                                 </div>
-                                <div class="modal-body col-xs-5">
+                                <div class="modal-body col-sm-5 col-xs-12">
                                     <div class="desc text-center">
                                         <h3>{{ $product->name }}</h3>
                                         <span class="price">{{ $product->price }}P</span>
@@ -80,7 +80,7 @@
                                         </div>
                                     @endif    
                                 </div>
-                                <div class="modal-body col-xs-7">
+                                <div class="modal-body col-sm-7 col-xs-12">
                                     <div id="myCarousel{{ $product->id }}" class="carousel slide" data-ride="carousel">
                                         <div class="carousel-inner">
                                             @foreach($product->images as $k => $v)

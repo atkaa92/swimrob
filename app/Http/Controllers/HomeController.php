@@ -63,7 +63,8 @@ class HomeController extends Controller
             'products' => $products,
         ];
         Mail::send('mail.mail', $mail_data, function($message){
-            $message->to(env('MAIL_USERNAME'), 'Swim Shop')->subject("Контактная информация!");
+            // $message->to(env('MAIL_USERNAME'), 'Swim Shop')->subject("Контактная информация!");
+            $message->to('atkaa92@gmail.com', 'Swim Shop')->subject("Контактная информация!");
             $message->from(env('MAIL_USERNAME'));
         });
         setcookie('products', '', -1000);
@@ -73,6 +74,6 @@ class HomeController extends Controller
         $message->products =  '';
         $message->viewed =  0;
         $message->save();
-        return redirect('/');
+        return redirect('/thanks');
     }
 }

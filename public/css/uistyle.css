@@ -120,3 +120,39 @@ input::-webkit-inner-spin-button {
   background-color: #84afde;
   border-color: #84afde;
 }
+
+@media only screen and (max-width: 477px){
+  .shopping-cart {
+    padding: 13px 2px 12px 0px!important;
+  }
+
+  .tal-sm{
+    text-align-last: left!important;
+  }
+  .pl-0-sm{
+    padding-left: 0;
+  }
+  .fz-25{
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 1200px){
+  .contactInput{
+    width: 220px !important;
+  }
+
+  .tal-sm{
+    text-align-last: left!important;
+  }
+  .pl-0-sm{
+    padding-left: 0;
+  }
+  .fz-25{
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 767px){
+  .contactInput{
+    width: 100% !important;
+  }
+}
